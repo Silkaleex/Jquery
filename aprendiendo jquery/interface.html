@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="jquery-ui-1.13.1/jquery-ui.min.css" />
+    <link
+      rel="stylesheet"
+      href="jquery-ui-1.13.1/jquery-ui.structure.min.css"
+    />
+    <link rel="stylesheet" href="jquery-ui-1.13.1/jquery-ui.theme.min.css" />
+    <script src="jquery-ui-1.13.1/jquery-ui.min.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Dongle:wght@700&family=Oswald&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap");
+      body {
+        cursor: pointer;
+        font-family: "Dongle", sans-serif;
+        font-size: 30px;
+        padding: 10px;
+        background: linear-gradient(#48c9b0, #a9cce3, #d1f2eb, #17a589);
+      }
+      h1 {
+        margin: 0px auto;
+        text-align: center;
+      }
+      .elemento {
+        width: 300px;
+        height: 200px;
+        border: 4px solid black;
+        background-color: lightblue;
+        margin: 20px;
+        float: left;
+      }
+      .lista-selecionable li {
+        width: 30%;
+        height: 20px;
+        padding: 20px;
+        border: 1px solid black;
+        border-radius: 10px;
+        background: dodgerblue;
+        list-style: none;
+        text-align: center;
+      }
+      .lista-selecionable li:hover {
+        width: 30%;
+        height: 20px;
+        padding: 20px;
+        border: 1px solid rgb(0, 255, 128);
+        border-radius: 50px;
+        background: linear-gradient(rgb(113, 113, 255), rgb(0, 4, 255));
+        color: silver;
+        list-style: none;
+        text-align: center;
+      }
+      ul .ui-selecting {
+        background: greenyellow;
+        font-size: 35px;
+        border-radius: 10px;
+        text-align: center;
+        border: 1px solid green;
+      }
+      ul .ui-selected {
+        background: aqua;
+        font-size: 35px;
+        border-radius: 20px;
+        text-align: center;
+        border: 1px solid blue;
+      }
+      #elemento-movido {
+        width: 100px;
+        height: 100px;
+        border: 5px solid red;
+      }
+      #area {
+        width: 300px;
+        height: 300px;
+        border: 5px solid yellow;
+      }
+      .caja-efectos {
+        background: blue;
+        width: 300px;
+        height: 300px;
+        border: 5px solid dodgerblue;
+        float: none;
+        display: none;
+      }
+      #popup {
+        display: none;
+      }
+      #fecha {
+        border: 5px groove #f1c40f;
+        border-radius: 50%;
+        background: linear-gradient(
+          #eb984e,
+          #f5cba7,
+          #f9e79f,
+          #f1c40f,
+          #9a7d0a,
+          #7d6608
+        );
+        text-align: center;
+        width: 350px;
+        height: 300px;
+        font-size: 45px;
+        margin: 0px auto;
+      }
+      #calendario {
+        padding: 15px;
+        font-size: 20px;
+        transform: translate(0px, -50px);
+        text-align: center;
+        border-radius: 20px;
+        font-size: bold;
+        background: #e6ff58;
+        width: 100px;
+      }
+      #calendario:hover {
+        padding: 15px;
+        font-size: 20px;
+        transform: translate(0px, -50px);
+        text-align: center;
+        border-radius: 20px;
+        background: white;
+        width: 100px;
+      }
+    </style>
+    <title>Interfaces</title>
+  </head>
+  <body>
+    <h1>Jquery UI Interfaces</h1>
+    <hr />
+    <h3>Tooltip</h3>
+    <a
+      href="#"
+      id="mis-datos"
+      title="Acceder a la seccion de mis datos de esta web"
+      >Mis Datos</a
+    >
+    <a href="#" id="mis-datos" title="Logeate en esta web">Identificate</a>
+    <a href="#" id="mis-datos" title="Ver todos mis amigos">Amigos</a>
+    <hr />
+    <h3>Cuadro de dialogo</h3>
+    <button id="lanzar-popup">Lanzame</button>
+    <div id="popup" title="¿Estas Seguro?">
+      <p>Si continuas en el curso aprenderas mucho de javascript</p>
+    </div>
+    <hr />
+    <button id="mostrar">Mostrar</button>
+    <div class="caja-efectos"></div>
+    <hr />
+    <div id="elemento-movido"></div>
+    <br />
+    <div id="area"></div>
+    <hr />
+    <ul class="lista-selecionable">
+      <li>Dark Shouls</li>
+      <li>The Witcher</li>
+      <li>Bloodborn</li>
+      <li>The Last Of US</li>
+      <li>Kindom Hearts</li>
+      <li>Fire Emblem</li>
+      <li>Pokemon</li>
+      <li>Super Smash Brosh Brawl</li>
+    </ul>
+    <hr />
+    <div class="elemento">Hola, soy un elemento de la web</div>
+    <div class="elemento">Hola, soy un elemento de la web</div>
+    <div class="elemento">Hola, soy un elemento de la web</div>
+    <br /><br /><br /><br /><br />
+    <br />
+    <hr />
+    <div id="fecha">
+      <h3>Calendario</h3>
+      <input type="text" id="calendario" />
+    </div>
+    <hr />
+    <hr />
+    <h3 style="font-family: 'Sedgwick Ave', cursive">PESTAÑAS</h3>
+    <div id="pestanas">
+      <ul>
+        <li><a href="#tabs-1">Pestaña 1</a></li>
+        <li><a href="#tabs-2">Pestaña 2</a></li>
+        <li><a href="#tabs-3">Pestaña 3</a></li>
+      </ul>
+      <div id="tabs-1">Hola soy la primera pestaña</div>
+      <div id="tabs-2">Hola soy la segunda pestaña</div>
+      <div id="tabs-3">Hola soy la tercera pestaña</div>
+    </div>
+    <hr />
+    <script src="interface.js"></script>
+  </body>
+</html>

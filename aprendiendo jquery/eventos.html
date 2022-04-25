@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background: linear-gradient(#00ff78, #00ffb6, #00fff7);
+      }
+      h1 {
+        margin: 0px auto;
+        text-align: center;
+        border: 10px groove black;
+        border-radius: 50px;
+      }
+      #caja {
+        width: 250px;
+        height: 250px;
+        border: 1px dashed black;
+        background: yellow;
+        transition: all 300ms;
+        margin: 50px;
+        transform: translate(0px, 0px);
+      }
+      #cuadro {
+        width: 250px;
+        height: 250px;
+        border: 1px dashed black;
+        background: transparent;
+        transition: all 300ms;
+        margin: 50px;
+        transform: translate(350px, -300px);
+      }
+      #datos {
+        border: 4px dashed black;
+        padding: 10px;
+        width: 250px;
+        height: 50px;
+        transform: translate(205px, -250px);
+        display: none;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+      }
+      #sigueme {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        display: block;
+        background: yellow;
+        opacity: 0.3;
+        border: 3px solid black;
+        border-radius: 100%;
+      }
+      form {
+        transform: translate(170px, -295px);
+      }
+      input {
+        padding: 20px;
+        width: 300px;
+        font-size: 20px;
+      }
+      p {
+        text-align: center;
+        margin: 0px auto;
+        margin-top: 50px;
+        padding: 20px;
+        font-size: 40px;
+        font-weight: bold;
+        border: 5px groove grey;
+        border-radius: 50%;
+        background: linear-gradient(#ff0033, #6200ff);
+      }
+    </style>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <title>Eventos Jquery</title>
+  </head>
+  <body>
+    <h1>Aprendiendo Jquery</h1>
+    <div id="caja"><p>soy una caja</p></div>
+    <div id="cuadro"><p>soy un cuadro</p></div>
+    <form><input type="text" id="nombre" /></form>
+    <div id="datos"></div>
+    <div id="sigueme"></div>
+    <script src="eventos.js"></script>
+  </body>
+</html>
